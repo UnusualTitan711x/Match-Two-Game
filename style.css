@@ -45,7 +45,7 @@ h1 {
 }
 
 /*card animation shenanigans*/
-.card-flipped .card-inner {
+.card.flipped .card-inner {
     transform: rotateY(180deg);
 }
 

@@ -6,7 +6,7 @@ let matchedCount = 0;
 let canFlip = true;
 
 const board = document.getElementById("board");
-const status = document.getElementById("status");
+const status_ = document.getElementById("status");
 const restartBtn = document.getElementById("restart-btn");
 
 function shuffle(array) {
@@ -54,7 +54,7 @@ function startGame() {
     flippedCards = [];
     matchedCount = 0;
     canFlip = true;
-    status.textContent = "Find all the matching pairs!";
+    status_.textContent = "Find all the matching pairs!";
 
     const deck = shuffle([...EMOJIS, ...EMOJIS]);
 
