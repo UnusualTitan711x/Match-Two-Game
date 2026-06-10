@@ -1,2 +1,4 @@
 # Match-Two-Game
-A simple web game about finding pairs of cards
+A simple Memory game made with HTML/CSS/JS
+
+Made with Claude but tweaked in some ways
