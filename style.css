@@ -87,6 +87,6 @@ h1 {
     cursor: pointer;
 }
 
-#restart-btn {
+#restart-btn:hover {
     background: #c73652;
 }
