@@ -80,10 +80,38 @@ function onCardClick(event) {
     flippedCards.push(card);
 
     if (flippedCards.length === 2) {
-        // checkForMatch();
+        checkForMatch();
+    }
+}
+
+function checkForMatch() {
+    const [first, second] = flippedCards;
+    const isMatch = first.dataset.emoji === second.dataset.emoji;
+
+    if (isMatch) {
+        first.classList.add("matched");
+        second.classList.add("matched");
+        flippedCards = [];
+        matchedCount++;
+
+        if (matchedCount === EMOJIS.length) {
+            status_.textContent = "🎉 You win! All pairs found!";
+        }
+    }
+    else {
+        canFlip = false;
+
+        setTimeout(() => {
+            first.classList.remove("flipped");
+            second.classList.remove("flipped");
+            flippedCards = [];
+            canFlip = true;
+        }, 900); // Wait 900ms to let the player see both cards
+        // still don't understand this structure yet but okay
     }
 }
 
 restartBtn.addEventListener("click", startGame);
 
 startGame();
+
